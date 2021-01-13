@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singolo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="home">
+        <div class="wrapper">
+            <div class="hamburger-menu header__burger--not-active">
+                <input id="menu__toggle" type="checkbox" /> 
+                    <label class="menu__btn" for="menu__toggle">
+      <span> </span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="#home">HOME</a></li>
+			<li><a class="menu__item" href="#services">SERVICES</a></li>
+			<li><a class="menu__item" href="#portfolio">PORTFOLIO</a></li>
+			<li><a class="menu__item" href="#about">ABOUT</a></li>
+			<li><a class="menu__item" href="#contact">CONTACT</a></li>
+    </ul>
+  </div>
+            </div>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>SINGOLO<span>*</span></h1>
+                </div>
+                <nav class="header__navigation">
+                    <ul class="navigation humburger-navigation">
+                        <li class="navigation_item"><a href="#home" class="navigation_link active_item">HOME</a></li>
+                        <li class="navigation_item"><a href="#services" class="navigation_link">SERVICES</a></li>
+                        <li class="navigation_item"><a href="#portfolio" class="navigation_link">PORTFOLIO</a></li>
+                        <li class="navigation_item"><a href="#about" class="navigation_link">ABOUT</a> </li>
+                        <li class="navigation_item"><a href="#contact" class="navigation_link">CONTACT</a></li>
+                    </ul>
+                </nav> 
+            </div>
+        </div>
+    </header> 
+<main>
+    <section class="slider">
+        <div class="wrapper">
+            <div class="slider-conteiner">
+                <div class="background-phone">
+                    <img src="img\Slide1.png" alt="" class="slider-image" id="slide1">
+                    <img src="img\Slide2.png" alt="" class="slider-image" id="slide2">  
+                </div>
+                <div class="arrow-left"><img src="img\arrow-left.png" alt="arrow-left" class="arrow slider__arrow slider__arrow--left" id=""></div>
+                <div class="arrow-right"><img src="img\arrow-right.svg" alt="arrow-right" class=" arrow slider__arrow slider__arrow--right"></div>
+            </div>
+        </div>
+    </section>
+    <section class="our__services" id="services">
+        <div class="wrapper">
+                <h2 class="our__services-main-description" >Our Services</h2>
+                <p class="our__services-add-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+             </p>
+            <div class="layout-3-column"> 
+                <div class="item">
+                    <div class="item-logo item-logo1"> </div>
+                    <div class="item-description">
+                        <h4 class="services-name">Custom Design</h4>
+                        <p class="services-description">
+                            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+                        </p>
+                    </div> 
+                </div> 
+                <div class="item">
+                    <div class="item-logo item-logo2"> </div>
+                    <div class="item-description">
+                        <h4 class="services-name">Inovative Ideas</h4>
+                        <p class="services-description">
+                            Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+                        </p>
+                    </div> 
+                </div> 
+                <div class="item">
+                    <div class="item-logo item-logo3"> </div>
+                    <div class="item-description">
+                        <h4 class="services-name">Love Is The Answer</h4>
+                        <p class="services-description">
+                            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+
+                        </p>
+                    </div> 
+                </div> 
+                <div class="item">
+                    <div class="item-logo item-logo4"> </div>
+                    <div class="item-description">
+                        <h4 class="services-name">Responsive Layout</h4>
+                        <p class="services-description">
+                            Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
+                        </p>
+                    </div> 
+                </div> 
+                <div class="item">
+                    <div class="item-logo item-logo5"> </div>
+                    <div class="item-description">
+                        <h4 class="services-name">24 / 7 Support</h4>
+                        <p class="services-description">
+                            Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
+                        </p>
+                    </div> 
+                </div> 
+                <div class="item">
+                    <div class="item-logo item-logo6"> </div>
+                    <div class="item-description">
+                        <h4 class="services-name">Feel Like A Star</h4>
+                        <p class="services-description">
+                            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+                        </p>
+                    </div> 
+                </div> 
+                       
+            </div>        
+         </div>
+                
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="wrapper">
+            <h2 class="portfolio-main-description">Portfolio</h2>
+            <p class="portfolio-add-description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+            </p>
+            <ul class="portfolio__tags">
+                <li class="tag tag_selected">All</li>
+                <li class="tag tag_bordered">Web Design</li>
+                <li class="tag tag_bordered">Graphic Design</li>
+                <li class="tag tag_bordered">Artwork</li>
+            </ul>
+            <div class="layout-4-column-grid">
+                <img src="img\portfolio-1.png" alt="pic.1" class="image">
+                <img src="img\portfolio-2.png" alt="pic.2" class="image">
+                <img src="img\portfolio-3.png" alt="pic.3" class="image">
+                <img src="img\portfolio-4.png" alt="pic.4" class="image">
+                <img src="img\portfolio-5.png" alt="pic.5" class="image">
+                <img src="img\portfolio-6.png" alt="pic.6" class="image">
+                <img src="img\portfolio-7.png" alt="pic.7" class="image">
+                <img src="img\portfolio-8.png" alt="pic.8" class="image">
+                <img src="img\portfolio-9.png" alt="pic.9" class="image">
+                <img src="img\portfolio-9.png" alt="pic.9" class="image">
+                <img src="img\portfolio-10.png" alt="pic.10" class="image">
+                <img src="img\portfolio-11.png" alt="pic.11" class="image">
+                <img src="img\portfolio-12.png" alt="pic.12" class="image">
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="contact">
+    <div class="wrapper">
+        <div class="container-footer">
+            <div class="copyright">
+                <span>&copy; Copyright 2013</span>
+            </div>
+            <div class="social-networks">
+                <a href="https://www.facebook.com" class="social-networks__item social-networks__item--icon--facebook"></a>
+                <a href="https://www.google.com" class="social-networks__item social-networks__item--icon--google"></a>
+                <a href="https://twitter.com" class="social-networks__item social-networks__item--icon--twitter"></a>
+                <a href="https://www.linkedin.com" class="social-networks__item social-networks__item--icon--linkedin"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
