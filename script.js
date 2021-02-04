@@ -26,7 +26,6 @@ arrowRight.addEventListener("click", () => {
   const next = images[nextIndex];
   sliderLine.append(next);
   next.style.display = "block";
-  // console.log('движение');
   next.style.animation = "moveRight 0.5s";
 
   counter += 1;
@@ -50,7 +49,6 @@ arrowLeft.addEventListener("click", () => {
   const prev = images[prevIndex];
   sliderLine.append(prev);
   prev.style.display = "block";
-  // console.log('движение');
   prev.style.animation = "moveLeft 0.5s";
 
   counter -= 1;
@@ -64,7 +62,6 @@ const mixRand = (a, b) => Math.random() - 0.5;
 for (let i = 0; i < button.length; i++) {
   let but = button[i];
   but.addEventListener("click", function (e) {
-    // console.log('нажатие на кнопку перемешивания картинок' );
     arrImgSrcMix = arrImg.map((e) => e.src).sort(mixRand);
     arrImg.map((e, i) => (e.src = arrImgSrcMix[i]));
   });

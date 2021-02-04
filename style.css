@@ -39,8 +39,6 @@ body {
 
 .wrapper {
   max-width: 1020px;
-  /* padding: 0px 40px 0px 40px; */
-  /* padding: 0 20px; */
 }
 /*----------------------- Header---------------------------------------------*/
 
@@ -68,7 +66,6 @@ body {
 .logo span {
   color: #e56e6a;
 }
-/*-------------------!!!!!!-------------------------------*/
 
 #menu__toggle {
   opacity: 0;
@@ -132,7 +129,6 @@ body {
   background-color: #cfd8dc;
   color: #f06c64;
 }
-/*--------------------!!!!!!!--------------------------------------*/
 .header__navigation {
   margin: 0;
 }
@@ -192,9 +188,9 @@ body {
 .slider {
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
-  width: 100%; /*-------------------!!!!!!-------*/
+  width: 100%;
 }
-/*-------------------!!!!!!-------*/
+
 .slider__arrow {
   position: absolute;
   top: 50%;
@@ -203,7 +199,6 @@ body {
   transform: translateY(-50%);
 }
 .slide1 {
-  /* position: relative; */
   top: 9%;
   left: 11%;
   max-width: 796px;
@@ -223,7 +218,7 @@ body {
 .slider__arrow--left:hover {
   transform: scale(1.4);
 }
-/*-------------------!!!!!!-------*/
+
 .slider-conteiner {
   margin: 0 auto;
   position: relative;
@@ -272,7 +267,7 @@ body {
   padding: 0px 0px 18px 0px;
 }
 .our__services {
-  width: 100%; /*-------------------!!!!!!-------*/
+  width: 100%;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
 }
@@ -342,11 +337,9 @@ body {
   border-bottom: 6px solid #323746;
 }
 .portfolio-main-description {
-  /*max-width: 940px;*/
   padding: 59px 0px 17px 40px;
 }
 .portfolio-add-description {
-  /* max-width: 940px; */
   padding: 0px 40px 12px 40px;
 }
 .portfolio__tags {
@@ -371,22 +364,13 @@ body {
   transform: scale(1.04);
   transition: 0.05s;
 }
-
 .layout-4-column-grid {
-  /*width: 100%;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   overflow: hidden;
   padding: 0px 15px 0px 30px;
   margin-bottom: 47px;
-  /* margin: 11px 40px 68px 38px;
-    display: grid;
-    overflow: hidden;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 20px;
-   */
 }
 .layout-4-column-grid img:nth-child(n + 13) {
   display: none;
@@ -397,7 +381,7 @@ body {
   width: 23%;
   margin-bottom: 20px;
 }
-/*Footer-----------------------------------------------------------------*/
+/*------------------------Footer-------------------------------------------------------*/
 footer {
   background-color: #2d303a;
 }
@@ -457,7 +441,6 @@ footer {
   .slider__arrow--left {
     left: 3.5%;
   }
-
   .slider__arrow--right {
     right: 3.5%;
   }
@@ -552,7 +535,6 @@ footer {
     margin: 0px 30px 0px 33px;
   }
   .our__services-add-description {
-    /* max-width: 311px; */
     margin: 1px 33px 0px 33px;
     padding: 0px;
     text-align: justify;
@@ -610,7 +592,6 @@ footer {
   .slider__arrow--left {
     left: 0.5%;
   }
-
   .slider__arrow--right {
     right: 0.5%;
   }
