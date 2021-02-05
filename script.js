@@ -1,8 +1,9 @@
 // DOM Elements
 const time = document.getElementById("time"),
+  dayOfMonth = document.getElementById("date"),
   greeting = document.getElementById("greeting"),
-  name = document.getElementById("name"),
-  focus = document.getElementById("focus");
+  yourName = document.getElementById("name"),
+  focusOnDay = document.getElementById("focus");
 
 // Options
 const showAmPm = true;
@@ -10,6 +11,9 @@ const showAmPm = true;
 // Show Time
 function showTime() {
   let today = new Date(),
+    year = today.getFullYear(),
+    day = today.getDate(),
+    month = today.getMonth(),
     hour = today.getHours(),
     min = today.getMinutes(),
     sec = today.getSeconds();
@@ -23,22 +27,23 @@ function showTime() {
   // Output Time
   time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(
     sec
-  )} ${showAmPm ? amPm : ""}`;
+  )}  ${showAmPm ? amPm : ""}`;
 
   setTimeout(showTime, 1000);
+  // Output Day
+  dayOfMonth.innerHTML = `<p>What Is Your Focus For Today (${addZero(
+    day
+  )}<span>.</span>${addZero(month + 1)}<span>.</span>${year}) ?</p>`;
 }
 
 // Add Zero
-function addZero(n) {
-  return (parseInt(n, 10) < 10 ? "0" : "") + n;
-}
+let addZero = (n) => (parseInt(n, 10) < 10 ? "0" : "") + n;
 
 // Set Background and Greeting
 function setBgGreet() {
   let today = new Date(),
     hour = today.getHours();
-
-  if (hour < 12) {
+  if (hour < 12 && hour > 6) {
     // Morning
     document.body.style.backgroundImage =
       "url('https://i.ibb.co/7vDLJFb/morning.jpg')";
@@ -48,11 +53,17 @@ function setBgGreet() {
     document.body.style.backgroundImage =
       "url('https://i.ibb.co/3mThcXc/afternoon.jpg')";
     greeting.textContent = "Good Afternoon:";
-  } else {
+  } else if (hour < 23) {
     // Evening
     document.body.style.backgroundImage =
       "url('https://i.ibb.co/924T2Wv/night.jpg')";
     greeting.textContent = "Good Evening";
+    document.body.style.color = "white";
+  } else {
+    // Night
+    document.body.style.backgroundImage =
+      "url('https://i.ibb.co/924T2Wv/night.jpg')";
+    greeting.textContent = "Good Night";
     document.body.style.color = "white";
   }
 }
@@ -60,9 +71,9 @@ function setBgGreet() {
 // Get Name
 function getName() {
   if (localStorage.getItem("name") === null) {
-    name.textContent = "[Enter Name]";
+    yourName.textContent = "[Enter Name]";
   } else {
-    name.textContent = localStorage.getItem("name");
+    yourName.textContent = localStorage.getItem("name");
   }
 }
 
@@ -72,7 +83,7 @@ function setName(e) {
     // Make sure enter is pressed
     if (e.which == 13 || e.keyCode == 13) {
       localStorage.setItem("name", e.target.innerText);
-      name.blur();
+      yourName.blur();
     }
   } else {
     localStorage.setItem("name", e.target.innerText);
@@ -82,9 +93,9 @@ function setName(e) {
 // Get Focus
 function getFocus() {
   if (localStorage.getItem("focus") === null) {
-    focus.textContent = "[Enter Focus]";
+    focusOnDay.textContent = "[Enter Focus]";
   } else {
-    focus.textContent = localStorage.getItem("focus");
+    focusOnDay.textContent = localStorage.getItem("focus");
   }
 }
 
@@ -94,17 +105,17 @@ function setFocus(e) {
     // Make sure enter is pressed
     if (e.which == 13 || e.keyCode == 13) {
       localStorage.setItem("focus", e.target.innerText);
-      focus.blur();
+      focusOnDay.blur();
     }
   } else {
     localStorage.setItem("focus", e.target.innerText);
   }
 }
 
-name.addEventListener("keypress", setName);
-name.addEventListener("blur", setName);
-focus.addEventListener("keypress", setFocus);
-focus.addEventListener("blur", setFocus);
+yourName.addEventListener("keypress", setName);
+yourName.addEventListener("blur", setName);
+focusOnDay.addEventListener("keypress", setFocus);
+focusOnDay.addEventListener("blur", setFocus);
 
 // Run
 showTime();
