@@ -71,7 +71,10 @@ function setBgGreet() {
 
 // Get Name
 function getName() {
-  if (localStorage.getItem("name") === null) {
+  if (
+    localStorage.getItem("name") === null ||
+    localStorage.getItem("name") === ""
+  ) {
     yourName.textContent = "[Enter Name]";
   } else {
     yourName.textContent = localStorage.getItem("name");
@@ -93,7 +96,10 @@ function setName(e) {
 
 // Get Focus
 function getFocus() {
-  if (localStorage.getItem("focus") === null) {
+  if (
+    localStorage.getItem("focus") === null ||
+    localStorage.getItem("focus") === ""
+  ) {
     focusOnDay.textContent = "[Enter Focus]";
   } else {
     focusOnDay.textContent = localStorage.getItem("focus");
@@ -113,8 +119,14 @@ function setFocus(e) {
   }
 }
 
+yourName.addEventListener("focus", function () {
+  yourName.textContent = "";
+});
 yourName.addEventListener("keypress", setName);
 yourName.addEventListener("blur", setName);
+focusOnDay.addEventListener("focus", function () {
+  focusOnDay.textContent = "-";
+});
 focusOnDay.addEventListener("keypress", setFocus);
 focusOnDay.addEventListener("blur", setFocus);
 
