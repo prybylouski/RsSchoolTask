@@ -6,13 +6,46 @@
   --sepia: 0%;
   --saturate: 100%;
   --hue-rotate: 0deg;
+  --opacity: 100%;
+  --grayscale: 0%;
+  --drop-shadow: 0px;
+  --contrast: 100%;
+  --brightness: 100%;
+  --size: 100%;
+}
+
+.container{
+  display: grid;
+  grid-template-columns:  1fr auto 1fr;
+  
+}
+
+label{
+  border: 1px solid black;
+  background: linear-gradient(to right bottom, var(--base), #19c09c);
+  border-radius: 25px;
+  padding: 5px;
+  text-align:center;
+  margin-bottom: 10px;
 }
 img {
-    border-radius:10%;
+  margin: 0 auto;
+  width: var(--size);
+  margin: 20px;
+  max-width: 90%;
+  border-radius: 10%;
   padding: var(--spacing);
   background: var(--base);
-  filter: blur(var(--blur)) invert(var(--invert, 0%)) sepia(var(--sepia, 0%))
-    saturate(var(--saturate, 100%)) hue-rotate(var(--hue-rotate, 0deg));
+  filter: blur(var(--blur)) 
+  invert(var(--invert, 0%)) 
+  sepia(var(--sepia, 0%))
+  saturate(var(--saturate, 100%)) 
+  hue-rotate(var(--hue-rotate, 0deg))
+  opacity(var(--opacity, 100%)) 
+  grayscale(var(--grayscale, 0%))
+  /* drop-shadow(var(--drop-shadow, 0px))  */
+  contrast(var(--contrast, 100%))
+  brightness(var(--brightness, 100%));
 }
 
 .hl {
@@ -20,8 +53,8 @@ img {
 }
 
 body {
-  text-align: center;
-  background:#ff0000e0;
+ 
+  background: #ff0000e0;
   color: white;
   font-family: "helvetica neue", sans-serif;
   font-weight: 100;
@@ -30,8 +63,10 @@ body {
 
 .controls {
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-  width: 100px;
+  width: 200px;
 }
